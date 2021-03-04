@@ -73,12 +73,31 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="API\Configuration\ModuleConfig.cs" />
+        <Compile Include="API\BarricadeManager.cs" />
+        <Compile Include="API\BlueprintManager.cs" />
+        <Compile Include="API\CommandManager.cs" />
+        <Compile Include="API\CraftingManager.cs" />
+        <Compile Include="API\JunkpileManager.cs" />
+        <Compile Include="API\LevelManager.cs" />
+        <Compile Include="API\LogManager.cs" />
+        <Compile Include="API\ReloadManager.cs" />
+        <Compile Include="API\ResourceManager.cs" />
+        <Compile Include="API\SplitterManager.cs" />
+        <Compile Include="Commands\CommandTest.cs" />
+        <Compile Include="Commands\CommandTP.cs" />
+        <Compile Include="Configuration\ModuleConfig.cs" />
         <Compile Include="Main.cs" />
         <Compile Include="Models\Configuration\BuildCost.cs" />
         <Compile Include="Models\Configuration\BuildCostConfig.cs" />
         <Compile Include="Models\Configuration\MainConfig.cs" />
         <Compile Include="Models\Core\IObjectComponent.cs" />
+        <Compile Include="Models\Inventory\EStage.cs" />
+        <Compile Include="Models\Inventory\ItemSlot.cs" />
+        <Compile Include="Models\Inventory\SplitInfo.cs" />
+        <Compile Include="Models\Junkpiles\Junkpile.cs" />
+        <Compile Include="Models\Junkpiles\Lootable.cs" />
+        <Compile Include="Models\Junkpiles\LootType.cs" />
+        <Compile Include="Models\Logging\LogData.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Utils\AsyncHelper.cs" />
         <Compile Include="Utils\ConfigHelper.cs" />
@@ -88,9 +107,6 @@
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="API" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
