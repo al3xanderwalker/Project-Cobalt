@@ -15,6 +15,9 @@ namespace Project_Cobalt.API
             
             ConfigHelper.EnsureConfig($"{configDir}MainConfig.json", MainConfig.DefaultConfig);
             ConfigHelper.EnsureConfig($"{configDir}Build_Cost.json", BuildCostConfig.DefaultConfig);
+
+            Main.Config = ConfigHelper.ReadConfig<MainConfig>($"{configDir}MainConfig.json");
+            Main.BuildCostConfig = ConfigHelper.ReadConfig<BuildCostConfig>($"{configDir}Build_Cost.json");
         }
     }
 }
