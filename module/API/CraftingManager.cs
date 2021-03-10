@@ -110,8 +110,13 @@ namespace Project_Cobalt.API
 
             blueprint.applyConditions(crafting.channel.owner.player, true);
             blueprint.grantRewards(crafting.channel.owner.player, true);
+            //crafting.tellCraft(crafting.channel.owner.playerID.steamID); //test
+            crafting.onCraftingUpdated();
+            
             crafting.channel.send("tellCraft", ESteamCall.OWNER, ESteamPacket.UPDATE_RELIABLE_BUFFER,
                 Array.Empty<object>());
+                
+                
         }
     }
 }

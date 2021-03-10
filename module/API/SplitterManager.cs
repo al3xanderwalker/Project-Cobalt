@@ -255,8 +255,10 @@ namespace Project_Cobalt.API
                         player.inventory.sendUpdateAmount(inventorySearch.page, inventorySearch.jar.x,
                             inventorySearch.jar.y, (byte) (inventorySearch.jar.item.amount + itemData.item.amount));
                         ItemManager.regions[x, y].items.RemoveAt(i);
+                        //ItemManager.takeItem(itemRegion.drops[i].model,0,0,0,0);
                         __instance.channel.send("tellTakeItem", ESteamCall.CLIENTS, x, y, ItemManager.ITEM_REGIONS,
                             ESteamPacket.UPDATE_RELIABLE_BUFFER, x, y, instanceID);
+                            
                         return false;
                     }
 
@@ -264,8 +266,10 @@ namespace Project_Cobalt.API
                         inventorySearch.jar.y, asset.amount);
                     itemData.item.amount = (byte) (itemData.item.amount - difference);
                     ItemManager.regions[x, y].items.RemoveAt(i);
+                    //ItemManager.takeItem(itemRegion.drops[i].model,0,0,0,0);
                     __instance.channel.send("tellTakeItem", ESteamCall.CLIENTS, x, y, ItemManager.ITEM_REGIONS,
                         ESteamPacket.UPDATE_RELIABLE_BUFFER, x, y, instanceID);
+                        
                     ItemManager.dropItem(itemData.item, itemData.point, true, true, true);
                     return true;
                 }

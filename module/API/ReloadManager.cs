@@ -26,6 +26,7 @@ namespace Project_Cobalt.API
             var magAsset = (ItemAsset) Assets.find(EAssetType.ITEM, __instance.equippedGunAsset.getMagazineID());
 
             var totalFound = steamPlayer.player.equipment.state[10];
+            var initial = totalFound;
             searches.ForEach(search =>
             {
                 var required = (byte) (magAsset.amount - totalFound);
@@ -42,6 +43,7 @@ namespace Project_Cobalt.API
                         (byte) (search.jar.item.amount - required));
                 }
             });
+            if (initial == totalFound) return false;
             steamPlayer.player.equipment.state[10] = totalFound;
             steamPlayer.player.animator.channel.send("askReload", ESteamCall.ALL, ESteamPacket.UPDATE_RELIABLE_BUFFER,
                 new object[]
