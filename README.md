@@ -25,7 +25,7 @@
 - [ ] Add ability to destroy recently placed structures using a hammer
 ## Crafting System
 ### Stackable Resources
-= [x] Crafting recipes can make use of stacked resources and properly handle using resources from multiple stacks.
+- [x] Crafting recipes can make use of stacked resources and properly handle using resources from multiple stacks.
 - [ ] Crafting recipes that produce multiple of an item properly grant stacked products *(May already been added idk)*
 ### Workbench System
 - [ ] Crafting requires being near the appropriate workbench tier required for the blueprint.
@@ -35,7 +35,7 @@
 - [ ] Allow for players to see what blueprints they have unlocked, ideally using a UI but a chat implementation may be used at first.
 ## Reloading System
 ### Ammo
-- [x] Guns will share ammunition types similar to rust with rifle/pistol bullets, guns will reload using the ammo from these stacks rather than mags.
+- [x] G.u.n.s will share ammunition types similar to rust with r.i.f.l.e/p.i.s.t.o.l b.u.l.l.e.t.s, g.u.n.s will reload using the ammo from these stacks rather than mags.
 ## Junkpile System
 ### Spawning
 - [x] Junkpiles spawn along roads randomly with a randomly generated assortment of barrels/crates on them.
@@ -48,13 +48,42 @@
 - [ ] Monuments have individual loot spawn locations with a weight chance to be of a certain type i.e. normal/military
 - [ ] Loot spawns are tracked by the server and respawned on interval in regards to how many players are online at the time.
 ### Puzzles
-= [ ] Unlikely addition, or at least wont be added till later 
+- [ ] Unlikely addition, or at least wont be added till later 
 ## Events
 ### Aidrop
 - [ ] Airdrop should be randomly spawned and have a weighted drop table ideally containing x amount of y type items.
 ### Locked Crate
 - [ ] Locked crate event will occur at monuments, similar to rust it will have a countdown which is started by a player.
 - [ ] Potentially marked on the map somehow or the location will be announced in chat.
+## Loot caches
+### Bodybags
+- [ ] Spawn a bodybag containing a players loot after death.
+- [ ] Add a seperate section with clothing
+- [ ] Prevent the addition of items to the storage
+- [ ] Add a life timer to clear the barricade after x time.
+- [ ] Make the life timer extended based on the value of the items in the bag.
+- [ ] Add data persistance in the event of crash/restart.
+### Loot caches
+- [ ] Spawn a loot cache when a barricade with items in is destroyed.
+- [ ] Add similar functions as with the body bags.
+## Smelting/Cooking
+### Smelting
+- [ ] Allow players to smelt mined ore by making use of a furnace
+- [ ] Add Multiple sized capacity furnaces Normal/Large
+- [ ] Different rates of smelting for different resources
+### Cooking
+- [ ] Allow players to cook stuff such as meat 
+- [ ] Varying capacity - i.e. campfire/barbeque
+
+## Claiming Land/Upkeep
+**Very rough ideas, unsure of implementation**
+### Upkeep/Claiming Land
+- [ ] Make use of BaseClustering to group structures together
+- [ ] Calculate an upkeep cost based on the structures attached to the TC.
+- [ ] TC acts as a claimflag
+### Decay
+- [ ] Ideally layered decay similar to in rust, however if not then gradual overall decay.
+- [ ] Resource specific decay i.e. stone only decaying if stone is not in TC
 ## Map
 **These ideas are very rough and unlikely to be implemented**
 Server generates a web server which allows players to login using the steam web client, and view a rendered map with events such as chinook crates, previous death locations ect.
